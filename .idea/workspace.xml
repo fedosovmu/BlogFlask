@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -23,6 +24,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -63,21 +69,21 @@
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
     <state x="975" y="559" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1336@0.23.2560.1336" timestamp="1600164827305" />
-    <state width="1739" height="309" key="GridCell.Tab.0.bottom" timestamp="1600178039810">
+    <state width="1343" height="268" key="GridCell.Tab.0.bottom" timestamp="1600183496482">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1739" height="309" key="GridCell.Tab.0.bottom/0.23.2560.1336@0.23.2560.1336" timestamp="1600178039810" />
-    <state width="1739" height="309" key="GridCell.Tab.0.center" timestamp="1600178039809">
+    <state width="1343" height="268" key="GridCell.Tab.0.bottom/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496482" />
+    <state width="1343" height="268" key="GridCell.Tab.0.center" timestamp="1600183496481">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1739" height="309" key="GridCell.Tab.0.center/0.23.2560.1336@0.23.2560.1336" timestamp="1600178039809" />
-    <state width="1739" height="309" key="GridCell.Tab.0.left" timestamp="1600178039808">
+    <state width="1343" height="268" key="GridCell.Tab.0.center/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496481" />
+    <state width="1343" height="268" key="GridCell.Tab.0.left" timestamp="1600183496480">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1739" height="309" key="GridCell.Tab.0.left/0.23.2560.1336@0.23.2560.1336" timestamp="1600178039808" />
-    <state width="1739" height="309" key="GridCell.Tab.0.right" timestamp="1600178039810">
+    <state width="1343" height="268" key="GridCell.Tab.0.left/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496480" />
+    <state width="1343" height="268" key="GridCell.Tab.0.right" timestamp="1600183496481">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1739" height="309" key="GridCell.Tab.0.right/0.23.2560.1336@0.23.2560.1336" timestamp="1600178039810" />
+    <state width="1343" height="268" key="GridCell.Tab.0.right/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496481" />
   </component>
 </project>
