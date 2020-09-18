@@ -3,7 +3,9 @@
 
 {% include 'navigation.html' %}
 
-{% include 'content.html' %}
+{% block content %}
+{% include 'index-content.html' %}
+{% endblock %}
 
 {% include 'footer.html' %}
 

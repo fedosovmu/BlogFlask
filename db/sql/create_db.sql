@@ -2,7 +2,8 @@ CREATE TABLE IF NOT EXISTS post (
     post_id integer PRIMARY KEY AUTOINCREMENT,
     title text NOT NULL,
     short_description text,
-    text text
+    text text,
+    img_url text
 );
 
 CREATE TABLE IF NOT EXISTS comment (
