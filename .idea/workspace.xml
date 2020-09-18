@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="507105ef-87ee-4b13-89f7-a3c44d930dda" name="Default Changelist" comment="" />
+    <list default="true" id="507105ef-87ee-4b13-89f7-a3c44d930dda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BlogDatabaseConnection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +37,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hXaCHGU62hBb4rS1dDVn58vnI3" />
   <component name="ProjectViewState">
@@ -64,26 +90,37 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="975" y="559" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600164827305">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
     <state x="975" y="559" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1336@0.23.2560.1336" timestamp="1600164827305" />
-    <state width="1343" height="268" key="GridCell.Tab.0.bottom" timestamp="1600183496482">
+    <state width="1343" height="268" key="GridCell.Tab.0.bottom" timestamp="1600184123190">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1343" height="268" key="GridCell.Tab.0.bottom/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496482" />
-    <state width="1343" height="268" key="GridCell.Tab.0.center" timestamp="1600183496481">
+    <state width="1343" height="268" key="GridCell.Tab.0.bottom/0.23.2560.1336@0.23.2560.1336" timestamp="1600184123190" />
+    <state width="1343" height="268" key="GridCell.Tab.0.center" timestamp="1600184123189">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1343" height="268" key="GridCell.Tab.0.center/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496481" />
-    <state width="1343" height="268" key="GridCell.Tab.0.left" timestamp="1600183496480">
+    <state width="1343" height="268" key="GridCell.Tab.0.center/0.23.2560.1336@0.23.2560.1336" timestamp="1600184123189" />
+    <state width="1343" height="268" key="GridCell.Tab.0.left" timestamp="1600184123189">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1343" height="268" key="GridCell.Tab.0.left/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496480" />
-    <state width="1343" height="268" key="GridCell.Tab.0.right" timestamp="1600183496481">
+    <state width="1343" height="268" key="GridCell.Tab.0.left/0.23.2560.1336@0.23.2560.1336" timestamp="1600184123189" />
+    <state width="1343" height="268" key="GridCell.Tab.0.right" timestamp="1600184123190">
       <screen x="0" y="23" width="2560" height="1336" />
     </state>
-    <state width="1343" height="268" key="GridCell.Tab.0.right/0.23.2560.1336@0.23.2560.1336" timestamp="1600183496481" />
+    <state width="1343" height="268" key="GridCell.Tab.0.right/0.23.2560.1336@0.23.2560.1336" timestamp="1600184123190" />
   </component>
 </project>
