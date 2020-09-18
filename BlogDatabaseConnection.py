@@ -22,7 +22,7 @@ class BlogDatabaseConnection:
         with self.__app.open_resource('db/sql/insert_test_data.sql', mode='r') as script_file:
             self.__cursor.executescript(script_file.read())
 
-    def execute_delete_all_post_script(self):
+    def execute_delete_all_posts_script(self):
         sql_script = "DELETE FROM post"
         self.__cursor.executescript(sql_script)
 

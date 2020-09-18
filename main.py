@@ -32,8 +32,8 @@ def execute_command(command):
         elif command == 'execute_create_db_script':
             blog_db_connection.execute_create_db_script()
             return 'OK'
-        elif command == 'execute_delete_all_post_script':
-            blog_db_connection.execute_delete_all_post_script()
+        elif command == 'execute_delete_all_posts_script':
+            blog_db_connection.execute_delete_all_posts_script()
             return 'OK'
         elif command == 'test_info':
             return 'hello world'
