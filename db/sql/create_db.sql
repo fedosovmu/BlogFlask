@@ -3,7 +3,8 @@ CREATE TABLE IF NOT EXISTS post (
     title text NOT NULL,
     short_description text,
     text text,
-    img_url text
+    img_url text,
+    publication_date text
 );
 
 CREATE TABLE IF NOT EXISTS comment (
