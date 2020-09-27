@@ -20,7 +20,12 @@ def index():
 
 @app.route('/post/<post_id>')
 def post(post_id):
-    return render_template('post.html', post_id = post_id)
+    blog_db_connection = BlogDatabaseConnection(app, g)
+    post = blog_db_connection.get_post_by_id(post_id)
+    if post:
+        return render_template('post.html', post = post)
+    else:
+        abort(404)
 
 @app.route('/debug/<command>')
 def execute_command(command):

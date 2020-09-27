@@ -1,4 +1,5 @@
 import sqlite3
+from Post import Post
 
 
 class BlogDatabaseConnection:
@@ -33,13 +34,16 @@ class BlogDatabaseConnection:
         return res
 
     def get_post_by_id(self, post_id):
-        sql = 'SELECT * FROM post WHERE post_id = %s'
+        sql = 'SELECT title, short_description, publication_date, img_url FROM post WHERE post_id = ?'
         self.__cursor.execute(sql, (post_id,))
-        res = self.__cursor.fetchall()
-        return res
+        row = self.__cursor.fetchone()
+        if row:
+            post = Post(post_id, row['title'], row['short_description'], row['publication_date'], row['img_url'])
+            return post
+        return None
 
     def get_post_comments(self, post_id):
-        sql = 'SELECT text FROM comment WHERE post_id = %s'
+        sql = 'SELECT text FROM comment WHERE post_id = ?'
         self.__cursor.execute(sql, (post_id,))
         res = self.__cursor.fetchall()
         return res
