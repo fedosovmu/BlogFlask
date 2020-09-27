@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507105ef-87ee-4b13-89f7-a3c44d930dda" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlogDatabaseConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/BlogDatabaseConnection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Post.py" beforeDir="false" afterPath="$PROJECT_DIR$/Post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/blog.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/blog.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/sql/clear_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/sql/clear_db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/sql/create_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/sql/create_db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/sql/insert_test_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/sql/insert_test_data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post-content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post-content.html" afterDir="false" />
-    </list>
+    <list default="true" id="507105ef-87ee-4b13-89f7-a3c44d930dda" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
