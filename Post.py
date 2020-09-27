@@ -1,10 +1,11 @@
 from datetime import datetime
 
 class Post:
-    def __init__(self, post_id, title, short_description, publication_date_iso_format, img_url):
+    def __init__(self, post_id, title, short_description, text, publication_date_iso_format, img_url):
         self.post_id = post_id
         self.title = title
         self.short_description = short_description
+        self.text = text
         self.publication_date = datetime.fromisoformat(publication_date_iso_format)
         self.img_url = img_url
 
@@ -13,4 +14,4 @@ class Post:
 
     @staticmethod
     def create_from_db_row(row):
-        return Post(row['post_id'], row['title'], row['short_description'], row['publication_date'], row['img_url'])
+        return Post(row['post_id'], row['title'], row['short_description'], row['text'], row['publication_date'], row['img_url'])

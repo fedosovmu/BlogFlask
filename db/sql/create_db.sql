@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS post (
     post_id integer PRIMARY KEY AUTOINCREMENT,
     title text NOT NULL,
     short_description text,
+    text text,
     img_url text,
     publication_date text
 );

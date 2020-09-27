@@ -29,7 +29,7 @@ class BlogDatabaseConnection:
         self.__cursor.executescript(sql_script)
 
     def get_posts(self):
-        sql = 'SELECT post_id, title, short_description, publication_date, img_url FROM post'
+        sql = 'SELECT post_id, title, short_description, text, publication_date, img_url FROM post'
         self.__cursor.execute(sql)
         result = self.__cursor.fetchall()
         posts = []
@@ -39,7 +39,7 @@ class BlogDatabaseConnection:
         return posts
 
     def get_post_by_id(self, post_id):
-        sql = 'SELECT post_id, title, short_description, publication_date, img_url FROM post WHERE post_id = ?'
+        sql = 'SELECT post_id, title, short_description, text, publication_date, img_url FROM post WHERE post_id = ?'
         self.__cursor.execute(sql, (post_id,))
         row = self.__cursor.fetchone()
         if row:
