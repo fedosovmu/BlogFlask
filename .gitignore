@@ -5,3 +5,5 @@ db/blog.db
 .idea/workspace.xml
 .idea/workspace.xml
 .idea/workspace.xml
+.idea/workspace.xml
+__pycache__/BlogDatabaseConnection.cpython-38.pyc
