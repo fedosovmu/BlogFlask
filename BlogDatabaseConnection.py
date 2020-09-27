@@ -28,10 +28,18 @@ class BlogDatabaseConnection:
 
     def get_posts(self):
         sql = '''SELECT post_id, title, short_description FROM post'''
-        try:
-            self.__cursor.execute(sql)
-            res = self.__cursor.fetchall()
-            if res: return res
-        except:
-            print('Ощибка чтения БД')
-        return []
+        self.__cursor.execute(sql)
+        res = self.__cursor.fetchall()
+        return res
+
+    def get_post_by_id(self, post_id):
+        sql = 'SELECT * FROM post WHERE post_id = %s'
+        self.__cursor.execute(sql, (post_id,))
+        res = self.__cursor.fetchall()
+        return res
+
+    def get_post_comments(self, post_id):
+        sql = 'SELECT text FROM comment WHERE post_id = %s'
+        self.__cursor.execute(sql, (post_id,))
+        res = self.__cursor.fetchall()
+        return res
