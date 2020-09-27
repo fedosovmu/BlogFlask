@@ -24,8 +24,9 @@ def index():
 def post(post_id):
     blog_db_connection = BlogDatabaseConnection(app, g)
     post = blog_db_connection.get_post_by_id(post_id)
+    comments = blog_db_connection.get_comments_by_post_id(post.post_id)
     if post:
-        return render_template('post.html', post = post)
+        return render_template('post.html', post = post, comments = comments)
     else:
         abort(404)
 
