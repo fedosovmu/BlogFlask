@@ -1,5 +1,6 @@
 import sqlite3
 import os
+import locale
 from flask import Flask, render_template, g, abort
 from BlogDatabaseConnection import BlogDatabaseConnection
 
@@ -12,6 +13,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 app.config.update((dict(DATABASE_PATH=os.path.join(app.root_path, 'db/blog.db'))))
 
+locale.setlocale(locale.LC_ALL, ('RU','UTF8'))
 
 @app.route('/')
 def index():

@@ -9,4 +9,8 @@ class Post:
         self.img_url = img_url
 
     def get_publication_date_str(self):
-        return self.publication_date.strftime("%m/%d/%Y, %H:%M:%S")
+        return self.publication_date.strftime("%d %B %Y в %H:%M")
+
+    @staticmethod
+    def create_from_db_row(row):
+        return Post(row['post_id'], row['title'], row['short_description'], row['publication_date'], row['img_url'])

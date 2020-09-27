@@ -11,14 +11,14 @@
         {% for post in posts -%}
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="{{ post.img_url }}" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">{{post['title']}}</h2>
-            <p class="card-text">{{post['short_description']}}</p>
-            <a href="/post/{{post['post_id']}}" class="btn btn-primary">Читать дальше &rarr;</a>
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.short_description }}</p>
+            <a href="/post/{{ post.post_id }}" class="btn btn-primary">Читать дальше &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Опубликованно January 1, 2020 источник
+            Опубликованно {{ post.get_publication_date_str() }}, источник
             <a href="habr.com">habr.com</a>
           </div>
         </div>

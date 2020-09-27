@@ -28,10 +28,14 @@ class BlogDatabaseConnection:
         self.__cursor.executescript(sql_script)
 
     def get_posts(self):
-        sql = '''SELECT post_id, title, short_description FROM post'''
+        sql = 'SELECT post_id, title, short_description, publication_date, img_url FROM post'
         self.__cursor.execute(sql)
-        res = self.__cursor.fetchall()
-        return res
+        result = self.__cursor.fetchall()
+        posts = []
+        for row in result:
+            post = Post.create_from_db_row(row)
+            posts.append(post)
+        return posts
 
     def get_post_by_id(self, post_id):
         sql = 'SELECT title, short_description, publication_date, img_url FROM post WHERE post_id = ?'
