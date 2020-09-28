@@ -24,13 +24,17 @@ class BlogDatabase:
         with self.__app.open_resource('db/sql/' + script_name, mode='r') as script_file:
             self.__cursor.executescript(script_file.read())
 
+    @staticmethod
+    def __create_post_from_db_row(row):
+        return Post(row['post_id'], row['title'], row['short_description'], row['text'], row['publication_date'], row['img_url'])
+
     def get_posts(self):
         sql = 'SELECT post_id, title, short_description, text, publication_date, img_url FROM post'
         self.__cursor.execute(sql)
         post_rows = self.__cursor.fetchall()
         posts = []
         for post_row in post_rows:
-            post = Post(post_row['post_id'], post_row['title'], post_row['short_description'], post_row['text'], post_row['publication_date'], post_row['img_url'])
+            post = self.__create_post_from_db_row(post_row)
             posts.append(post)
         return posts
 
@@ -39,9 +43,13 @@ class BlogDatabase:
         self.__cursor.execute(sql, (post_id,))
         post_row = self.__cursor.fetchone()
         if post_row:
-            post = Post(post_row['post_id'], post_row['title'], post_row['short_description'], post_row['text'], post_row['publication_date'], post_row['img_url'])
+            post = self.__create_post_from_db_row(post_row)
             return post
         return None
+
+    @staticmethod
+    def __create_comment_from_db_row(row):
+        return Comment(row['comment_id'], row['post_id'], row['text'])
 
     def get_comments_by_post_id(self, post_id):
         sql = 'SELECT comment_id, post_id, text FROM comment WHERE post_id = ?'
@@ -49,7 +57,7 @@ class BlogDatabase:
         comment_rows = self.__cursor.fetchall()
         comments = []
         for comment_row in comment_rows:
-            comment = Comment(comment_row['comment_id'], comment_row['post_id'], comment_row['text'])
+            comment = self.__create_comment_from_db_row(comment_row)
             comments.append(comment)
         return comments
 
