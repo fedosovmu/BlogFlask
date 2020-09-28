@@ -33,8 +33,8 @@ def post(post_id):
 
 @app.route('/script/<script_name>')
 def execute_script(script_name):
-    blog_db.connect()
     if DEBUG:
+        blog_db.connect()
         blog_db.execute_script(script_name)
     else:
         abort(404)

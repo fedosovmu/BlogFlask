@@ -27,29 +27,29 @@ class BlogDatabase:
     def get_posts(self):
         sql = 'SELECT post_id, title, short_description, text, publication_date, img_url FROM post'
         self.__cursor.execute(sql)
-        result = self.__cursor.fetchall()
+        post_rows = self.__cursor.fetchall()
         posts = []
-        for row in result:
-            post = Post(row['post_id'], row['title'], row['short_description'], row['text'], row['publication_date'], row['img_url'])
+        for post_row in post_rows:
+            post = Post(post_row['post_id'], post_row['title'], post_row['short_description'], post_row['text'], post_row['publication_date'], post_row['img_url'])
             posts.append(post)
         return posts
 
     def get_post_by_id(self, post_id):
         sql = 'SELECT post_id, title, short_description, text, publication_date, img_url FROM post WHERE post_id = ?'
         self.__cursor.execute(sql, (post_id,))
-        row = self.__cursor.fetchone()
-        if row:
-            post = Post(row['post_id'], row['title'], row['short_description'], row['text'], row['publication_date'], row['img_url'])
+        post_row = self.__cursor.fetchone()
+        if post_row:
+            post = Post(post_row['post_id'], post_row['title'], post_row['short_description'], post_row['text'], post_row['publication_date'], post_row['img_url'])
             return post
         return None
 
     def get_comments_by_post_id(self, post_id):
         sql = 'SELECT comment_id, post_id, text FROM comment WHERE post_id = ?'
         self.__cursor.execute(sql, (post_id,))
-        result = self.__cursor.fetchall()
+        comment_rows = self.__cursor.fetchall()
         comments = []
-        for row in result:
-            comment = Comment(row['comment_id'], row['post_id'], row['text'])
+        for comment_row in comment_rows:
+            comment = Comment(comment_row['comment_id'], comment_row['post_id'], comment_row['text'])
             comments.append(comment)
         return comments
 
