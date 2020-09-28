@@ -3,30 +3,31 @@ from Post import Post
 from Comment import Comment
 
 
-class BlogDatabaseConnection:
+class BlogDatabase:
     def __init__(self, app, g):
         if not hasattr(g, 'db_connection'):
+            self.__app = app
+            self.__g = g
             self.__db_connection = self.__connect_db(app)
             g.db_connection = self.__db_connection
             self.__cursor = self.__db_connection.cursor()
             self.__app = app
 
-    def __connect_db(self, app):
-        db_connection = sqlite3.connect(app.config['DATABASE_PATH'])
-        db_connection.row_factory = sqlite3.Row
-        return db_connection
+    def connect(self):
+        if not hasattr(self.__g, 'db_connection'):
+            db_connection = sqlite3.connect(self.__app.config['DATABASE_PATH'])
+            db_connection.row_factory = sqlite3.Row
+            self.__db_connection = db_connection
+            self.__g.db_connection = self.__db_connection
+            self.__cursor = self.__db_connection.cursor()
 
-    def execute_create_db_script(self):
-        with self.__app.open_resource('db/sql/create_db.sql', mode='r') as script_file:
+    def close_connection(self):
+        if hasattr(self.__g, 'db_connection'):
+            self.__g.close()
+
+    def execute_script(self, script_name):
+        with self.__app.open_resource('db/sql/' + script_name, mode='r') as script_file:
             self.__cursor.executescript(script_file.read())
-
-    def execute_insert_test_data_script(self):
-        with self.__app.open_resource('db/sql/insert_test_data.sql', mode='r') as script_file:
-            self.__cursor.executescript(script_file.read())
-
-    def execute_delete_all_posts_script(self):
-        sql_script = "DELETE FROM post"
-        self.__cursor.executescript(sql_script)
 
     def get_posts(self):
         sql = 'SELECT post_id, title, short_description, text, publication_date, img_url FROM post'
@@ -56,3 +57,4 @@ class BlogDatabaseConnection:
             comment = Comment.create_from_db_row(row)
             comments.append(comment)
         return comments
+
