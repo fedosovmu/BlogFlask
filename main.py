@@ -14,7 +14,7 @@ app.config.from_object(__name__)
 app.config.update((dict(DATABASE_PATH=os.path.join(app.root_path, 'db/blog.db'))))
 
 locale.setlocale(locale.LC_ALL, ('RU','UTF8'))
-blog_db = BlogDatabase(app, g)
+blog_db = BlogDatabase(app)
 
 @app.route('/')
 def index():
