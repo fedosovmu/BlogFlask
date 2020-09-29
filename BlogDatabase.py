@@ -59,3 +59,6 @@ class BlogDatabase:
             comments.append(comment)
         return comments
 
+    def add_comment_to_post_by_post_id(self, comment_text, post_id):
+        sql = 'INSERT INTO comment (post_id, text) VALUES (?, ?)'
+        self.__db_connection.commit()
